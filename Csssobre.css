@@ -16,8 +16,11 @@
 
 .imagem{
     display: flex;
-    width: 80px;
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
     position: relative;
+    top: -10px;
 }
 .logoSobre{
     display: flex;
