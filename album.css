@@ -1,0 +1,9 @@
+.navbar{
+    display: flex;
+    background-color: #ecde1b;
+    border-radius: 10px;
+    height: 100px;
+    justify-content: space-between;
+    
+    
+}
