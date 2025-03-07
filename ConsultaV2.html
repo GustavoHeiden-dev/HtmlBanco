@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+         }
+
+        body {
+            font-family: "Lucida Sans", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'main main main main main main'
+                'footer footer footer footer footer footer';
+            gap: 10px;
+            background-color: white;
+            width: 100%;
+           height: 100vh;
+        }
+
+        .grid-container>div {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .item1 {
+            grid-area: header;
+            background-color: #ecde1b;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 5px;
+            height: 100px;
+            font-size: 12px; 
+        }
+
+       
+
+        .item3 {
+            grid-area: main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+
+        }
+
+        .item3 > table {
+            border-collapse: collapse;
+            margin: 5px;
+            width: 100vw;
+        }
+
+        .item3 th{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            
+        }
+        .item3 td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .item3 th {
+            background-color: #ecde1bd5;
+        }
+
+        .item5 {
+            grid-area: footer;
+            background-color: #ecde1b;
+            color: #ffffff;
+            text-align: center;
+            
+        }
+
+        
+
+        @media only screen and (max-width: 600px) {
+            .item1 {
+                grid-area: 1 / span 6;
+            }
+
+            .item2 {
+                grid-area: 2 / span 6;
+            }
+
+            .item3 {grid-area: 3 / span 6;}
+            .item4 {
+                grid-area: 4 / span 6;
+            }
+
+            .item5 {
+                grid-area: 8 / span 6;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .item1 {
+                grid-area: 1 / span 6;
+            }
+
+            .item2 {
+                grid-area: 2 / span 1;
+            }
+
+            /*.item3 {grid-area: 2 / span 4;}*/
+            .item4 {
+                grid-area: 3 / span 6;
+            }
+
+            .item5 {
+                grid-area: 8 / span 6;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .item1 {
+                grid-area: 1 / span 6;
+            }
+
+            .item2 {
+                grid-area: 2 / span 1;
+            }
+
+            .item3 {
+                grid-area: 2 / span 4;
+            }
+
+            .item4 {
+                grid-area: 2 / span 1;
+            }
+
+            .item5 {
+                grid-area: 8 / span 6;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .item1 {
+                grid-area: 1 / span 6;
+            }
+
+            .item2 {
+                grid-area: 2 / span 1;
+            }
+
+            .item3 {grid-area: 2 / span 4;}
+            .item4 {
+                grid-area: 3 / span 6;
+            }
+
+            .item5 {
+                grid-area: 8 / span 6;
+            }
+
+            .item3>table {
+                border-collapse: collapse;
+                margin: 5px;
+            }
+        }
+        .logo{
+    display: flex;  
+    position: relative;
+    right: -10px;
+    top: -55px;
+    width: 100px;
+    
+   
+    height: 100px;
+}
+.imagem{
+    display: flex;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: -10px;
+    border-radius: 5px;
+}
+.volta{
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+.volta:hover{
+    transition: 0.4s;
+    color: rgb(76, 76, 212);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="item1">
+            <h1 class="titulo">Consulta tabela</h1>
+            <div class="logo"><img class="imagem"src="./fotos/th.jpg"  ></div>
+        </div>
+        
+        <div class="item3">
+            <table>
+                <thead >
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Idade</th>
+                </tr>
+            </thead>
+            <thebody>
+                <tr>
+                    <td>Ana Souza</td>
+                    <td>ana@email.com</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Bruno Lima</td>
+                    <td>bruno@email.com</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Carla Mendes</td>
+                    <td>carla@email.com</td>
+                    <td>28</td>
+                </tr>
+            </thebody>
+            </table>
+        </div>
+
+        <div class="item5"><a href="Cssflex1.html" class="volta">Voltar</a></div>
+
+    </div>
+
+</body>
+
+</html>

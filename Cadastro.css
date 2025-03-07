@@ -108,6 +108,7 @@ box-sizing: border-box;
     border-radius: 10px;
     height: 80px; 
     width: 10000px;
+    text-align: center;
 }
 .voltar{
    margin: 10px;
